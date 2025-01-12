@@ -1,0 +1,31 @@
+# Diagonal-elements
+public class DiagonalElements {
+    public static void main(String[] args) {
+        // Example of a 4x4 matrix
+        int[][] matrix = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+        
+        int n = matrix.length;  // The size of the square matrix (number of rows or columns)
+        
+        System.out.println("Primary Diagonal Elements:");
+        // Loop through to print primary diagonal elements (matrix[i][i])
+        for (int i = 0; i < n; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+
+        System.out.println("\nSecondary Diagonal Elements:");
+        // Loop through to print secondary diagonal elements (matrix[i][n-i-1])
+        for (int i = 0; i < n; i++) {
+            System.out.print(matrix[i][n - i - 1] + " ");
+        }
+    }
+}
+output:
+Primary Diagonal Elements:
+1 6 11 16 
+Secondary Diagonal Elements:
+4 7 10 13
